@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+	<classPathEntry location="G:\maven\mysql\mysql-connector-java\5.1.22\mysql-connector-java-5.1.22.jar"/>
+  <ibatorContext id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/ds_main_res" userId="liusha" password="liusha@123" >
+	</jdbcConnection>
+    <javaModelGenerator targetPackage="com.ppsea.ds.data.model" targetProject="dsserver\src\main\java" />
+    <sqlMapGenerator targetPackage="com.ppsea.ds.data.maps" targetProject="dsserver\src\main\resources" />
+    <daoGenerator targetPackage="com.ppsea.ds.data.dao" targetProject="dsserver\src\main\java" type="GENERIC-CI" />
+	  
+	<table tableName="skill">
+		<property name="rootClass" value=" com.ppsea.ds.data.BaseObject" />
+		<generatedKey column="id" sqlStatement="MySql" identity="true" />
+    </table>
+  </ibatorContext>
+</ibatorConfiguration>
+
+	
+
+
+

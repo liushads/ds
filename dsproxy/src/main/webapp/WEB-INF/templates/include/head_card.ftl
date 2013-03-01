@@ -1,0 +1,1 @@
+<card title="${game_title}"><p>

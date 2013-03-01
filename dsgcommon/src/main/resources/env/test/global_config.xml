@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+<!--标示proxy使用的zone-->
+<targetZone id="0"/>
+
+<!--全局配置-->
+<global md5Key="qazsdWSDE1109df_g" indexUrl="http://jh.ppsea.com:8080/in.jsp"
+	feed_host="192.168.1.10" feed_port="19999"	>
+	<driver name="com.mysql.jdbc.Driver"/>	
+</global>
+
+<!--分区配置-->	
+<zone id="0" name="斗神0区" host="localhost" port="12000" adminPort="13000" sortId="2" maxPlayerNum="0" playerCacheLimit="3000">
+	<db host="localhost" port="3306" dbname="ds_main" username="liusha" password="liusha@123" delaytime="0"/>
+	<res host="localhost" port="3306" dbname="ds_main_res" username="liusha" password="liusha@123"/>
+	<access vip="308,300"/>
+	<desc default="" fullNum="0" busyNum="0"/>
+	<!--proxy配置-->	
+	<proxy host="aben402.xicp.net" port="8091" md5Key="qazsdWSDE1109df_0" />	
+</zone>
+
+</root>
+
+

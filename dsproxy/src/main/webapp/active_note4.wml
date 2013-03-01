@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE wml PUBLIC '-//WAPFORUM//DTD WML 1.1//EN' 'http://www.wapforum.org/DTD/wml_1.1.xml'>
+<wml>
+<head>
+  <meta http-equiv="Content-type" content="text/vnd.wap.wml;"/>
+</head>
+<card>
+<p>
+1、	修炼=离线挂机<br/>
+2、	暂时只支持10-100级玩家使用<br/>
+3、	玩家离线即可自动开始挂机<br/>
+4、	每24小时最多可修炼5小时对应等级阶段获得的经验<br/>
+5、	领取经验需要闭关修炼符<br/>
+6、	每日可在福利坊免费领取2个闭关修炼符<br/>
+7、	1个闭关修炼符=1小时闭关修炼经验=人物1半经验、宠物1半经验<br/>
+8、	宠物需要跟随才可以领取宠物经验，否则宠物将无法获得经验<br/>
+9、	使用宠物修炼丹+闭关修炼符=全部修炼经验给予正在跟随的宠物<br/>
+10、	使用人物修炼丹+闭关修炼符=全部修炼经验给予人物<br/>
+11、	修炼功能若有问题欢迎各位玩家积极反映给官方，请不要在公共场合讨论BUG，一经证实反映问题有效可给予奖励！<br/>
+
+<anchor>
+	<prev/>返回
+</anchor>
+<br/>
+</p>
+</card>
+</wml>

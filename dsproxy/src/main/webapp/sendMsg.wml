@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE wml PUBLIC '-//WAPFORUM//DTD WML 1.1//EN' 'http://www.wapforum.org/DTD/wml_1.1.xml'>
+<wml>
+	<card title="测试私聊内容乱码"><p>
+	测试私聊内容乱码,请输入私聊内容:<br/>
+	<input name="msg" type="text" maxlength="30" emptyok="false" /><br/>
+	<anchor>提交
+		<go href="/servlet/AdminServlet?cmd=sendMsg" method="post">
+			<postfield name="msg" value="$msg" />
+			<postfield name="type" value="1" />
+			<postfield name="targetId" value="110" />
+	     </go>
+	</anchor>
+	</p>
+	</card>
+</wml>

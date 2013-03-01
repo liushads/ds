@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ppsea.ds</groupId>
+    <artifactId>ds</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>dsproxy</artifactId>
+  <packaging>war</packaging>
+  <name>dsproxy Maven Webapp</name>
+  
+  <build>
+    <finalName>dsproxy</finalName>
+  </build>
+  
+  <dependencies>
+  		<dependency>
+			<groupId>com.ppsea.ds</groupId>
+			<artifactId>dsserver</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+  </dependencies>
+</project>

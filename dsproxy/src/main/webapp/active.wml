@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE wml PUBLIC '-//WAPFORUM//DTD WML 1.1//EN' 'http://www.wapforum.org/DTD/wml_1.1.xml'>
+<wml>
+<head>
+  <meta http-equiv="Content-type" content="text/vnd.wap.wml;"/>
+</head>
+<card>
+<p>
+活动公告<br/>
+1、	“钓”出惊喜！“许”出意外！新功能开放<a href="/active_note3.wml">操作方法</a><br/>
+2、	斗神OL会员开启<a href="/active_note2.wml">操作方法</a><br/>
+3、	推荐员系统<a href="/active_note5.wml">操作方法</a><br/>
+4、	仓库系统<a href="/active_note6.wml">操作方法</a><br/>
+5、	分解、锻造<a href="/active_note7.wml">操作方法</a><br/>
+6、	采集、制药<a href="/active_note9.wml">操作方法</a><br/>
+7、	修炼<a href="/active_note4.wml">操作方法</a><br/>
+<anchor>
+	<prev/>返回
+</anchor>
+</p>
+</card>
+</wml>

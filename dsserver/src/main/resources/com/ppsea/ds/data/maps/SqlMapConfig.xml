@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<properties url="file:db.properties"></properties>
+	<!--
+		These settings control SqlMap configuration details, primarily to do
+		with transaction management. They are all optional (see the Developer
+		Guide for more).
+	-->
+	<settings cacheModelsEnabled="true" enhancementEnabled="true" lazyLoadingEnabled="true" maxRequests="32" maxSessions="10" maxTransactions="5" useStatementNamespaces="true" />
+	<!--
+		Configure a built-in transaction manager. If you're using an app
+		server, you probably want to use its transaction manager and a managed
+		datasource
+	
+	<transactionManager type="JDBC" commitRequired="false">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+			<property name="JDBC.ConnectionURL" value="jdbc:mysql://localhost:3306/ppsea_main" />
+			<property name="JDBC.Username" value="ppseaer" />
+			<property name="JDBC.Password" value="ppseaer@ppsea.com" />
+		</dataSource>
+	</transactionManager>
+		-->
+	<transactionManager type="JDBC" commitRequired="false">
+		<dataSource type="DBCP">
+			<property name="JDBC.Driver" value="${driver}" />
+			<property name="JDBC.ConnectionURL" value="${zone_url}" />
+			<property name="JDBC.Username" value="${zone_username}" />
+			<property name="JDBC.Password" value="${zone_password}" />
+			<!-- Optional properties below -->
+			<property name="Pool.MaximumIdleConnections" value="3" />
+			<property name="Pool.MaximumWait" value="60000" />
+			<!-- Use of the validation query can be problematic.
+              If you have difficulty, try without it. -->
+			
+			<property name="Pool.LogAbandoned" value="false" />
+			<property name="Pool.RemoveAbandoned" value="false" />
+			<property name="Pool.RemoveAbandonedTimeout" value="50000" />
+		</dataSource>
+	</transactionManager>
+	<!--
+		List the SQL Map XML files. They can be loaded from the classpath, as
+		they are here (com.domain.data...)
+	-->
+	<sqlMap resource="com/ppsea/ds/data/maps/id_generator_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_item_SqlMap.xml" />	
+	<sqlMap resource="com/ppsea/ds/data/maps/npc_interaction_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/message_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/city_tong_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_mission_past_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_mission_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_resell_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_item_append_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_dart_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/get_once_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_dart_prize_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_skill_SqlMap.xml" />
+</sqlMapConfig>

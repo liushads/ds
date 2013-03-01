@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+<!--标示proxy使用的zone-->
+<targetZone id="{targetZoneId}"/>
+
+	<!--全局配置-->
+	<global md5Key="qazsdWSDE1109df_g" indexUrl="http://mg.3g.qq.com/login.jsp?cpid=917&amp;gameid=127" status="release" payUrl="http://221.130.15.189:8081/pay/a" memcached_server="10.144.130.78:11211">
+		<driver name="com.mysql.jdbc.Driver"/>	
+	</global>
+	
+	<!--分区配置-->	
+	<zone id="1" name="邀请区(停止注册)" host="10.144.129.188" port="12001" adminPort="13001" sortId="20" maxPlayerNum="6010" playerCacheLimit="3000">
+		<db host="10.144.130.34" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>
+		<desc default="" fullNum="0" busyNum="0"/>
+		<!--proxy配置-->	
+		<proxy host="mogzh1.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_1" />	
+	</zone>
+	
+	<zone id="2" name="龙魂(2区已经合入7区)" host="10.144.129.188" port="12002" adminPort="13002" sortId="2016" maxPlayerNum="0" playerCacheLimit="3500">
+		<db host="10.144.130.34" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh7.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_7" />		
+	</zone>
+
+	<zone id="3" name="无双(3区已经合入8区)" host="10.144.130.32" port="12003" adminPort="13003" sortId="2019" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.34" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh8.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_8" />		
+	</zone>	
+
+	<zone id="4" name="苍穹(4区已经合入9区)" host="10.144.130.32" port="12004" adminPort="13004" sortId="2018" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.34" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh9.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_9" />		
+	</zone>		
+
+	<zone id="5" name="战歌(5区已经合入7区)" host="10.144.129.188" port="12002" adminPort="13002" sortId="2021" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.34" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh7.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_7" />		
+	</zone>	
+
+	<zone id="6" name="问鼎(6区已经合入7区)" host="10.144.130.43" port="12006" adminPort="13006" sortId="2020" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.78" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh7.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_7" />		
+	</zone>		
+	
+	<zone id="7" name="逐鹿(7区)" host="10.144.130.44" port="12007" adminPort="13007" sortId="7" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.78" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh7.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_7" />		
+	</zone>	
+
+	<zone id="8" name="英雄(8区)" host="10.144.130.44" port="12008" adminPort="13008" sortId="6" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.78" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh8.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_8" />		
+	</zone>	
+	
+	<zone id="9" name="笑傲(9区)" host="10.144.130.43" port="12009" adminPort="13009" sortId="5" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.78" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh9.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_9" />		
+	</zone>	
+	<zone id="10" name="沧海(10区已经合入12区)" host="10.144.130.137" port="12009" adminPort="13009" sortId="2015" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.111" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh12.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_12" />		
+	</zone>	
+	<zone id="11" name="帝王(11区已经合入12区)" host="10.144.130.43" port="12011" adminPort="13011" sortId="2017" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.111" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh12.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_12" />		
+	</zone>
+
+	<zone id="12" name="血魂(12区)" host="10.144.130.32" port="12012" adminPort="13012" sortId="4" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.111" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh12.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_12" />		
+	</zone>
+	
+	<zone id="13" name="天下(13区)" host="10.144.129.188" port="12013" adminPort="13013" sortId="3" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.34" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh13.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_13" />		
+	</zone>
+	
+	<zone id="14" name="春秋(14区)" host="10.144.130.137" port="12014" adminPort="13014" sortId="2" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.111" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh14.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_14" />		
+	</zone>
+	
+	<zone id="15" name="雄霸(15区)" host="10.144.130.43" port="12015" adminPort="13015" sortId="1" maxPlayerNum="0" playerCacheLimit="3000">
+		<db host="10.144.130.111" port="3306" dbname="jianghu_main" username="ppseaer" password="ppseaer@ppsea.com" delaytime="300000"/>
+		<res host="10.144.130.34" port="3306" dbname="jianghu_res" username="ppseaer" password="ppseaer@ppsea.com"/>
+		<access vip="308,300"/>	
+		<desc default="" fullNum="0" busyNum="0"/>
+		<proxy host="mogzh15.3g.qq.com" port="80" md5Key="qazsdWSDE1109df_15" />		
+	</zone>
+	
+	<pay desKey="876543217654321065432109">
+		<db host="10.144.130.34" port="3306" dbname="ppsea_pay" username="ppseaer" password="ppseaer@ppsea.com"/>
+	</pay>	
+	
+</root>
+
+

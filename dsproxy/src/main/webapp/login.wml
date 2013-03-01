@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE wml PUBLIC '-//WAPFORUM//DTD WML 1.1//EN' 'http://www.wapforum.org/DTD/wml_1.1.xml'>
+<wml>
+<head>
+  <meta http-equiv="Content-type" content="text/vnd.wap.wml; charset=utf-8"/>
+  <meta http-equiv='Cache-Control' content='max-age=0' forua='true'/>
+</head>
+<card title="斗神">
+<p>
+欢迎来到斗神，输入QQ号:<br/>
+<input name="qq" maxlength="12" emptyok="false" type="text" /><br/>
+<anchor>登录
+	<go href="/i" method="get">
+		<postfield name="uid" value="$qq"/>
+	</go>
+</anchor>
+</p>
+</card>
+</wml>

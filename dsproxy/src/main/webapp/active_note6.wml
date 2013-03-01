@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE wml PUBLIC '-//WAPFORUM//DTD WML 1.1//EN' 'http://www.wapforum.org/DTD/wml_1.1.xml'>
+<wml>
+<head>
+  <meta http-equiv="Content-type" content="text/vnd.wap.wml;"/>
+</head>
+<card>
+<p>
+操作方法：<br/>
+1、	仓库地点：<br/>
+	   离火郡-黑猿山-广场中央<br/>
+              望龙郡-惊鸿岭-广场中央<br/>
+              玄机郡-百花谷-广场中央<br/>
+              青阳郡-跃马原-广场中央<br/>
+              万毒郡-毒龙谷-广场中央<br/>
+2、	仓库需要扩充才可以使用<br/>
+3、	仓库最大40格<br/>
+4、	仓库扩充一次需要2金（系统自动先判断扣费金票、若无金票则收取金锭）每扩充一次增加10格<br/>
+5、	仓库存放玩家物品栏中的装备类不可叠加，药品和材料类可叠加<br/>
+6、	仓库存放物品只计算物品占的格子数量不计算负重量，请合理使用您的仓库<br/>
+
+<br/>
+
+<anchor>
+	<prev/>返回
+</anchor>
+</p>
+</card>
+</wml>

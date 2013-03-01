@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE wml PUBLIC '-//WAPFORUM//DTD WML 1.1//EN' 'http://www.wapforum.org/DTD/wml_1.1.xml'>
+<wml>
+<head>
+  <meta http-equiv="Content-type" content="text/vnd.wap.wml; charset=utf-8"/>
+  <meta http-equiv='Cache-Control' content='max-age=0' forua='true'/>
+</head>
+<card title="短信充值未到账解决办法">
+<p>
+短信充值未到账解决办法<br/>
+操作步骤：商城--充值--游戏账户，在游戏账户中可以看到游戏账户中的钱（短信充值的钱），输入需要兑换到游戏中的金锭的个数，点击兑换就可以看到游戏中多了金锭。<br/>
+<anchor>
+	<prev/>返回<br/>
+</anchor>
+</p>
+</card>
+</wml>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<display-name>ds proxy</display-name>
+	<context-param>
+		<param-name>configFile</param-name>
+		<param-value>global_config.xml</param-value>    
+	</context-param>
+	
+	<context-param>
+		<param-name>charSet</param-name>
+		<param-value>UTF-8</param-value>    
+	</context-param>
+	
+	<context-param>
+		<param-name>regexFile</param-name>
+		<param-value>regex.config</param-value>    
+	</context-param>
+	
+	<context-param>
+		<param-name>templateDir</param-name>
+		<param-value>templates</param-value>    
+	</context-param>
+	
+	<context-param>
+		<param-name>poolSize</param-name>
+		<param-value>100</param-value>    
+	</context-param>
+	
+	<context-param>
+		<param-name>blockIp</param-name>
+		<param-value>block_ip.txt</param-value>    
+	</context-param>
+	
+	<context-param>
+		<param-name>allowIp</param-name>
+		<param-value>allow_ip.txt</param-value>    
+	</context-param>
+	
+	<!--servlet-->
+	<servlet>
+		<servlet-name>proxy</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.servlet.ProxyServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>in</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.servlet.QQInServlet</servlet-class>
+	</servlet>
+		
+	<servlet>
+	  <servlet-name>InitServlet</servlet-name>
+	  <servlet-class>com.ppsea.ds.proxy.servlet.InitServlet</servlet-class>
+	  <load-on-startup>9</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AdminServlet</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.servlet.AdminServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>qbPay</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.pay.QbPayServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>szfPay</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.pay.SzfPayServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>getAccount</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.pay.GetAccountServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>exchange</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.pay.ExchangeServlet</servlet-class>
+	</servlet>		
+	<servlet>
+		<servlet-name>qqpayall</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.pay.QQPayAllServlet</servlet-class>
+	</servlet>		
+	<servlet>
+		<servlet-name>jh_zhsh</servlet-name>
+		<servlet-class>com.ppsea.ds.proxy.servlet.JhZhshServlet</servlet-class>
+	</servlet>		
+		
+	<!--mapping--> 
+	<servlet-mapping>
+    	<servlet-name>proxy</servlet-name>
+		<url-pattern>/p</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+    	<servlet-name>in</servlet-name>
+		<url-pattern>/i</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>InitServlet</servlet-name>
+		<url-pattern>/servlet/InitServlet</url-pattern>
+	</servlet-mapping>	
+			
+	<servlet-mapping>
+    	<servlet-name>qbPay</servlet-name>
+		<url-pattern>/qb</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+    	<servlet-name>szfPay</servlet-name>
+		<url-pattern>/szf</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AdminServlet</servlet-name>
+		<url-pattern>/servlet/AdminServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+    	<servlet-name>getAccount</servlet-name>
+		<url-pattern>/ga</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+    	<servlet-name>exchange</servlet-name>
+		<url-pattern>/e</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+    	<servlet-name>qqpayall</servlet-name>
+		<url-pattern>/qpa</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+    	<servlet-name>jh_zhsh</servlet-name>
+		<url-pattern>/jh_zhsh</url-pattern>
+	</servlet-mapping>
+	
+ 	<welcome-file-list>
+		<welcome-file>index.wml</welcome-file>
+	</welcome-file-list>
+</web-app>

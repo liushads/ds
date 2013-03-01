@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<properties url="file:db.properties"></properties>	
+	<!--
+		These settings control SqlMap configuration details, primarily to do
+		with transaction management. They are all optional (see the Developer
+		Guide for more).
+	-->
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="32" maxSessions="10"
+		maxTransactions="5" useStatementNamespaces="true" />
+	<!--
+		Configure a built-in transaction manager. If you're using an app
+		server, you probably want to use its transaction manager and a managed
+		datasource
+	
+	<transactionManager type="JDBC" commitRequired="false">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+			<property name="JDBC.ConnectionURL" value="jdbc:mysql://localhost:3306/ppsea_main" />
+			<property name="JDBC.Username" value="ppseaer" />
+			<property name="JDBC.Password" value="ppseaer@ppsea.com" />
+		</dataSource>
+	</transactionManager>
+		-->
+	<transactionManager type="JDBC" commitRequired="false">
+       <dataSource type="DBCP">
+              <property name="JDBC.Driver" value="${driver}"/>
+              <property name="JDBC.ConnectionURL" value="${res_url}"/>
+              <property name="JDBC.Username" value="${res_username}"/>
+              <property name="JDBC.Password" value="${res_password}"/>
+              <!-- Optional properties below -->
+              <property name="Pool.MaximumIdleConnections" value="1"/>
+              <property name="Pool.MaximumWait" value="60000"/>
+              <!-- Use of the validation query can be problematic.
+              If you have difficulty, try without it. -->
+              <property name="Pool.ValidationQuery" value="select * from area limit 1"/>
+              <property name="Pool.LogAbandoned" value="false"/>
+              <property name="Pool.RemoveAbandoned" value="false"/>
+              <property name="Pool.RemoveAbandonedTimeout" value="50000"/>
+		   </dataSource>
+	</transactionManager>
+	<!--
+		List the SQL Map XML files. They can be loaded from the classpath, as
+		they are here (com.domain.data...)
+	-->
+	<sqlMap resource="com/ppsea/ds/data/maps/area_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/city_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/facility_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/city_facility_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/sect_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/sect_title_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_level_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_upgrade_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/item_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/npc_item_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/item_position_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/action_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/config_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/route_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/temp_route_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/npc_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/city_facility_npc_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/mission_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/mission_pre_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/mission_type_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/question_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/item_mission_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/monster_mission_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/npc_mission_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_route_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_player_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_result_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_action_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_monster_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_skill_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_item_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_result_player_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_result_skill_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_result_item_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_facility_SqlMap.xml" />	
+	<sqlMap resource="com/ppsea/ds/data/maps/event_extra_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/event_extra_desc_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/goods_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/goods_item_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/monster_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/monster_type_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/monster_prop_conf_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/city_facility_monster_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/npc_random_words_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/chuansong_item_config_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/raw_mission_SqlMap.xml" />
+	
+	<sqlMap resource="com/ppsea/ds/data/maps/help_qa_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/question_type_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/spec_buff_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/spec_type_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/item_type_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/buff_rand_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/buff_type_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/compose_item_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/item_suit_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/item_decompose_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/player_resell_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/resell_price_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/item_improve_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/dart_SqlMap.xml" />
+	<sqlMap resource="com/ppsea/ds/data/maps/skill_SqlMap.xml" />
+</sqlMapConfig>
